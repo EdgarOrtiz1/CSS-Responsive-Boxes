@@ -1,3 +1,55 @@
+* {
+  border-color: red;
+}
 body {
   background: blanchedalmond;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.a {
+  background-color: red;
+  flex-grow: 2;
+  text-align: center;
+  color: white;
+}
+.b {
+  background-color: blue;
+  flex-grow: 5;
+  text-align: center;
+  color: white;
+}
+.c {
+  background-color: green;
+  flex-grow: 1;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .container{
+    flex-flow: row wrap;
+  }
+  .a {
+    min-width: 100px;
+    min-height: 200px;
+    align-self: flex-start;
+    order: -1;
+    flex: 1 0 100%;
+    margin: 1em;
+  }
+  .b {
+    min-width: 100px;
+    min-height: 500px;
+    margin: 1em;
+  }
+  .c {
+    min-width: 100px;
+    min-height: 500px;
+    align-self: flex-end;
+    margin: 1em;
+  }
 }
